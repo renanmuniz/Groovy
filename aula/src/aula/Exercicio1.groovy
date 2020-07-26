@@ -1,3 +1,4 @@
+package aula
 
 class Exercicio1 {
     static main(args) {
