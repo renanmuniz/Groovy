@@ -130,4 +130,51 @@ class Exercicios {
         println url
     }
 
+    @Test
+    void exercicio12() {
+        String nome = null
+        if(nome) {
+            println true
+        } else {
+            println false
+        }
+
+        nome = "Renan"
+        if(nome) {
+            println true
+        } else {
+            println false
+        }
+
+
+        int valor = 0
+        if(valor) {
+            println true
+        } else {
+            println false
+        }
+
+        valor = 5
+        if(valor) {
+            println true
+        } else {
+            println false
+        }
+
+        List<String> colecao = new ArrayList<>()
+        if(colecao) {
+            println true
+        } else {
+            println false
+        }
+
+        colecao.add "Renan"
+        if(colecao) {
+            println true
+        } else {
+            println false
+        }
+
+    }
+
 }
