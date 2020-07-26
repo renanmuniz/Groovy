@@ -42,4 +42,22 @@ class Exercicios {
         println c.getNome() + " - " +c.getData()
     }
 
+    @Test
+    void exercicio4() {
+        Cliente c = new Cliente(nome: "Renan", data: new Date())
+        println c.getNome()
+        println c.getData()
+
+        println c["nome"]
+        println c["data"]
+
+        c["nome"] = "Vinicius"
+
+        println c["nome"]
+        println c["data"]
+
+
+
+    }
+
 }
