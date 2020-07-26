@@ -124,4 +124,10 @@ class Exercicios {
         println colecao
     }
 
+    @Test
+    void exercicio11() {
+        URL url = new URL("http://www.google.com.br")
+        println url
+    }
+
 }
