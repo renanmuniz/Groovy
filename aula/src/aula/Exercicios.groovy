@@ -3,6 +3,8 @@ package aula
 import classes.Cliente
 import classes.Produto
 import org.junit.Test
+import classes.Cliente as Xu
+import static javax.swing.JFrame.EXIT_ON_CLOSE as ex
 
 class Exercicios {
 
@@ -69,6 +71,15 @@ class Exercicios {
         p.nome = "SummerEletroHits"
         p.valor = 80.0
         println p.nome + " - " + p.valor
+    }
+
+    @Test
+    void exercicio6() {
+        Xu c = new Xu(nome: "Renan", data: new Date())
+        println c.getNome() + " - " + c.getData()
+
+        println ex
+
     }
 
 }
