@@ -2,6 +2,7 @@ package aula
 
 import classes.Cliente
 import classes.Produto
+import classes.Somar
 import classes.Venda
 import org.junit.Test
 import classes.Cliente as Xu
@@ -89,6 +90,14 @@ class Exercicios {
         println v.vender(100)
         println v.vender(100,20)
 
+    }
+
+    @Test
+    void exercicio8() {
+        Somar soma = new Somar()
+        println soma.somar(10)
+        println soma.somar(10,10)
+        println soma.somar(10,10,10)
     }
 
 }
