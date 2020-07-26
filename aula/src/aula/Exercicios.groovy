@@ -190,4 +190,26 @@ class Exercicios {
         println "n1.valor: " + n1.valor
     }
 
+    @Test
+    void exercicio13ponto2() {
+        BigDecimal vl = 10
+        println vl
+
+        vl = vl + 1
+        println vl
+
+        vl++
+        println vl
+
+        vl = vl - 5
+        println vl
+
+        Date data = new Date()
+        println data
+        data++
+        println data
+
+
+    }
+
 }
