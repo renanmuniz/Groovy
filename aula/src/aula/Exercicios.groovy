@@ -100,4 +100,15 @@ class Exercicios {
         println soma.somar(10,10,10)
     }
 
+    @Test
+    void exercicio9() {
+        Cliente c = null
+        c?.nome="Renan"
+        println c?.getNome()
+
+        Cliente c2 = new Cliente()
+        c2?.nome = "Renan"
+        println c2?.getNome()
+    }
+
 }
