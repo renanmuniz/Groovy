@@ -2,6 +2,7 @@ package aula
 
 import classes.Cliente
 import classes.Produto
+import classes.Venda
 import org.junit.Test
 import classes.Cliente as Xu
 import static javax.swing.JFrame.EXIT_ON_CLOSE as ex
@@ -79,6 +80,14 @@ class Exercicios {
         println c.getNome() + " - " + c.getData()
 
         println ex
+
+    }
+
+    @Test
+    void exercicio7() {
+        Venda v = new Venda()
+        println v.vender(100)
+        println v.vender(100,20)
 
     }
 
