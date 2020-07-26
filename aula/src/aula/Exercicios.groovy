@@ -1,6 +1,7 @@
 package aula
 
 import classes.Cliente
+import classes.Produto
 import org.junit.Test
 
 class Exercicios {
@@ -58,6 +59,16 @@ class Exercicios {
 
 
 
+    }
+
+    @Test
+    void exercicio5() {
+        Produto p = new Produto("CD",50.0)
+        println p.nome + " - " + p.valor
+
+        p.nome = "SummerEletroHits"
+        p.valor = 80.0
+        println p.nome + " - " + p.valor
     }
 
 }
