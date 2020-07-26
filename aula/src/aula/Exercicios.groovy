@@ -111,4 +111,17 @@ class Exercicios {
         println c2?.getNome()
     }
 
+    @Test
+    void exercicio10() {
+        List<String> colecao = new ArrayList<>()
+        colecao.add("Fernando")
+        colecao.add(null)
+        colecao.add("Renan")
+        colecao.add("Vinicius")
+        println colecao
+
+        colecao = colecao*.toUpperCase()
+        println colecao
+    }
+
 }
