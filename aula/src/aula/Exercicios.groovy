@@ -1,6 +1,7 @@
 package aula
 
 import classes.Cliente
+import classes.Nota
 import classes.Produto
 import classes.Somar
 import classes.Venda
@@ -175,6 +176,18 @@ class Exercicios {
             println false
         }
 
+    }
+
+    @Test
+    void exercicio13() {
+        Nota n1 = new Nota(itens:2,valor:20)
+        Nota n2 = new Nota(itens:2,valor:20)
+        Nota n3 = n1 + n2
+        println "itens: " + n3.itens
+        println "valor: " + n3.valor
+        n1++
+        println "n1.itens: " + n1.itens
+        println "n1.valor: " + n1.valor
     }
 
 }
