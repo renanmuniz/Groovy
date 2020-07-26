@@ -27,4 +27,19 @@ class Exercicios {
         println c.getNome() + " - " + c.getData()
     }
 
+    @Test
+    void exercicio3() {
+        Cliente c = new Cliente()
+        //println c.getNome() + c.getData()
+
+        //c = new Cliente(nome: "Renan")
+        //println c.getNome() + c.getData()
+
+        //c = new Cliente(data: new Date())
+        //println c.getNome() + c.getData()
+
+        c = new Cliente(nome: "Renan", data: new Date())
+        println c.getNome() + " - " +c.getData()
+    }
+
 }
