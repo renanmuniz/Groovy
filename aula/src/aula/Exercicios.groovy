@@ -1,6 +1,7 @@
 package aula
 
 import classes.Cliente
+import classes.Funcionario
 import classes.Nota
 import classes.Produto
 import classes.Somar
@@ -210,6 +211,12 @@ class Exercicios {
         println data
 
 
+    }
+
+    @Test
+    void exercicio14() {
+        Funcionario f = new Funcionario(nome: "Renan", idade:30, salario:2095.0)
+        println f
     }
 
 
