@@ -9,6 +9,7 @@ import classes.Nota
 import classes.Pedido
 import classes.Produto
 import classes.Somar
+import classes.Teste
 import classes.Venda
 import org.junit.Test
 import classes.Cliente as Xu
@@ -257,6 +258,44 @@ class Exercicios {
         println comida.fruta
         println comida.bebida
         println comida.doce
+    }
+
+    @Test
+    void exercicio19() {
+        def objeto = "texto"
+        println objeto.getClass()
+
+        objeto = 10
+        println objeto.getClass()
+
+        objeto = 10.50
+        println objeto.getClass()
+
+        objeto = new Nota(itens: 2, valor: 20)
+        println objeto.getClass()
+
+        objeto = new Pedido(cliente: "Renan", numero: 10)
+        println objeto.getClass()
+    }
+
+    @Test
+    void exercicio20() {
+        def teste = new Teste()
+        def v1 = teste.metodo("Renan")
+        println v1.getClass()
+        println v1
+
+        v1 = teste.metodo(10)
+        println v1.getClass()
+        println v1
+
+        def data = new Date()
+        println data
+        v1 = teste.metodo data
+        println v1.getClass()
+        println v1
+
+
     }
 
 }
