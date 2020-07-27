@@ -1,9 +1,11 @@
 package aula
 
 import classes.Cliente
+import classes.Conexao
 import classes.Funcionario
 import classes.Funcionario2
 import classes.Nota
+import classes.Pedido
 import classes.Produto
 import classes.Somar
 import classes.Venda
@@ -228,5 +230,24 @@ class Exercicios {
         println f2.equals(f1)
     }
 
+    @Test
+    void exercicio16() {
+        Pedido p = new Pedido(cliente: "Renan", numero:10)
+        println p.cliente + " - " + p.numero
+        println p
+
+        //p.cliente = "Fernando"
+
+    }
+
+
+    @Test
+    void exercicio17() {
+        Conexao.instance.valor = 10
+        println Conexao.instance.valor
+        Conexao con = Conexao.instance
+        con.valor = 11
+        println Conexao.instance.valor
+    }
 
 }
