@@ -1,6 +1,7 @@
 package aula
 
 import classes.Cliente
+import classes.Comida
 import classes.Conexao
 import classes.Funcionario
 import classes.Funcionario2
@@ -248,6 +249,14 @@ class Exercicios {
         Conexao con = Conexao.instance
         con.valor = 11
         println Conexao.instance.valor
+    }
+
+    @Test
+    void exercicio18() {
+        Comida comida = Comida.builder().fruta("maca").bebida("guarana").doce("chocolate").build()
+        println comida.fruta
+        println comida.bebida
+        println comida.doce
     }
 
 }
