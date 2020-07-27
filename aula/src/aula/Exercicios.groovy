@@ -2,6 +2,7 @@ package aula
 
 import classes.Cliente
 import classes.Funcionario
+import classes.Funcionario2
 import classes.Nota
 import classes.Produto
 import classes.Somar
@@ -217,6 +218,14 @@ class Exercicios {
     void exercicio14() {
         Funcionario f = new Funcionario(nome: "Renan", idade:30, salario:2095.0)
         println f
+    }
+
+    @Test
+    void exercicio15() {
+        Funcionario2 f1 = new Funcionario2(nome: "Renan", idade:30, salario:2095.0)
+        Funcionario2 f2 = new Funcionario2(nome: "Renan", idade:30, salario:2095.0)
+        println f1.equals(f2)
+        println f2.equals(f1)
     }
 
 
