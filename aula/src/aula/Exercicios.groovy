@@ -8,6 +8,7 @@ import classes.Funcionario2
 import classes.Nota
 import classes.Pedido
 import classes.Produto
+import classes.Relatorio
 import classes.Somar
 import classes.Teste
 import classes.Venda
@@ -350,6 +351,13 @@ class Exercicios {
         def r3 = funcao(LocalDate.now(),1)
         println r3.class
         println r3
+    }
+
+    @Test
+    void exercicio25() {
+        def limpeza = {texto -> texto.trim().replace("a","@").replace(" ","").capitalize()}
+        def rel = new Relatorio()
+        rel.emitir("r e n a n ", limpeza)
     }
 
 }
