@@ -298,4 +298,40 @@ class Exercicios {
 
     }
 
+    @Test
+    void exercicio21() {
+        def colecao = new ArrayList<String>()
+        colecao.add("Renan")
+        colecao.add("Vinicius")
+        for (item in colecao) {
+            println item.class.toString() + " = " + item
+        }
+
+        colecao = new ArrayList<Integer>()
+        colecao.add(10)
+        colecao.add(20)
+        for (item in colecao) {
+            println item.class.toString() + " = " + item
+        }
+
+    }
+
+    @Test
+    void exercicio22() {
+        def metodo = {int v1, int v2 -> v1 + v2}
+        println metodo(10,10)
+        println metodo(2,3)
+    }
+
+    @Test
+    void exercicio23() {
+        def imprimir = {String v ->
+            String temp = v.trim().replace("a","@")
+            temp = temp.toUpperCase()
+            temp
+        }
+        println imprimir("Renan")
+    }
+
+
 }
