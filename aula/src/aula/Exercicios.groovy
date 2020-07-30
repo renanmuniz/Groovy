@@ -13,6 +13,9 @@ import classes.Teste
 import classes.Venda
 import org.junit.Test
 import classes.Cliente as Xu
+
+import java.time.LocalDate
+
 import static javax.swing.JFrame.EXIT_ON_CLOSE as ex
 
 class Exercicios {
@@ -333,5 +336,20 @@ class Exercicios {
         println imprimir("Renan")
     }
 
+    @Test
+    void exercicio24() {
+        def funcao = {v1, v2 -> v1 + v2}
+        def r1 = funcao(2,5)
+        println r1.class
+        println r1
+
+        def r2 = funcao("Renan ","Muniz ")
+        println r2.class
+        println r2
+
+        def r3 = funcao(LocalDate.now(),1)
+        println r3.class
+        println r3
+    }
 
 }
