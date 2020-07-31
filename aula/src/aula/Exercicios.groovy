@@ -13,6 +13,7 @@ import classes.Produto
 import classes.Relatorio
 import classes.Somar
 import classes.Teste
+import classes.Torcida
 import classes.Venda
 import org.junit.Test
 import classes.Cliente as Xu
@@ -391,6 +392,26 @@ class Exercicios {
         cantor.cantar()
 
         palco.show({println "closure cantando como se fosse cantor"})
+    }
+
+    @Test
+    void exercicio29() {
+        Torcida t = null
+        def corintiano = [
+                pular : {println "Curintia pulando"},
+                gritar : {p -> println "curintia - " + p}
+        ] as Torcida
+        t = corintiano
+        t.pular()
+        t.gritar("Vai ae")
+
+        def porcada = [
+                pular : {println "porco eooo"},
+                gritar : {p -> println "porcooooo - " + p}
+        ] as Torcida
+        t = porcada
+        t.pular()
+        t.gritar("verdão")
     }
 
 }
