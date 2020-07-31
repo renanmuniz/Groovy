@@ -429,4 +429,36 @@ class Exercicios {
         fat.vender(10.00)
     }
 
+    @Test
+    void exercicio31ponto2() {
+        def f1 = new Fatura()
+        //f1.faturar(10)
+
+        Fatura.metaClass.faturar = {valor -> println "Faturar no valor = " + valor}
+        def f2 = new Fatura()
+        f2.faturar(10)
+    }
+
+    @Test
+    void exercicio32ponto1() {
+        def fat = new Fatura()
+        //fat.nome = "Renan"
+
+        fat.metaClass.nome = "Renan"
+        println fat.nome
+        fat.nome = "outra coisa"
+        println fat.nome
+    }
+
+    @Test
+    void exercicio32ponto2() {
+        def f1 = new Fatura()
+        //f1.cliente = "teste"
+
+        Fatura.metaClass.cliente = ""
+        def fat = new Fatura()
+        fat.cliente = "Renan"
+        println fat.cliente
+    }
+
 }
