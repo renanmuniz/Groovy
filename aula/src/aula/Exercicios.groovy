@@ -1,11 +1,13 @@
 package aula
 
+import classes.Cantor
 import classes.Cliente
 import classes.Comida
 import classes.Conexao
 import classes.Funcionario
 import classes.Funcionario2
 import classes.Nota
+import classes.Palco
 import classes.Pedido
 import classes.Produto
 import classes.Relatorio
@@ -372,8 +374,23 @@ class Exercicios {
         def rel = new Relatorio()
         rel.emitir("RENAN") {it + " DA SILVA"}
         rel.emitir("RENAN") {it.reverse()}
+    }
 
+    @Test
+    void exercicio28() {
+        Palco palco = new Palco()
+        Cantor cantor = null
 
+        def imp = {println "vou cantar"}
+        cantor = imp
+        cantor.cantar()
+
+        palco.show(cantor)
+
+        cantor = {println "agora vou chorar"}
+        cantor.cantar()
+
+        palco.show({println "closure cantando como se fosse cantor"})
     }
 
 }
