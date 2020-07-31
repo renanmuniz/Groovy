@@ -367,4 +367,13 @@ class Exercicios {
         rel.emitir("RENAN") {a -> a.replace("N", "#")}
     }
 
+    @Test
+    void exercicio27() {
+        def rel = new Relatorio()
+        rel.emitir("RENAN") {it + " DA SILVA"}
+        rel.emitir("RENAN") {it.reverse()}
+
+
+    }
+
 }
