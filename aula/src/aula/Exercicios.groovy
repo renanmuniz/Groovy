@@ -4,6 +4,7 @@ import classes.Cantor
 import classes.Cliente
 import classes.Comida
 import classes.Conexao
+import classes.Fatura
 import classes.Funcionario
 import classes.Funcionario2
 import classes.Nota
@@ -419,6 +420,13 @@ class Exercicios {
     //static main(arg) {
         def tela = new Tela()
         tela.setVisible(true)
+    }
+
+    @Test
+    void exercicio31ponto1() {
+        def fat = new Fatura()
+        fat.metaClass.vender = {valor -> println("Venda no valor de: " + valor)}
+        fat.vender(10.00)
     }
 
 }
