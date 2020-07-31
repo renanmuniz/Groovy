@@ -360,4 +360,11 @@ class Exercicios {
         rel.emitir("r e n a n ", limpeza)
     }
 
+    @Test
+    void exercicio26() {
+        def rel = new Relatorio()
+        rel.emitir("RENAN") {v -> v + " DA SILVA"}
+        rel.emitir("RENAN") {a -> a.replace("N", "#")}
+    }
+
 }
