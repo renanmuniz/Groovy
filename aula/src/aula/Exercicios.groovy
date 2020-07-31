@@ -12,6 +12,7 @@ import classes.Pedido
 import classes.Produto
 import classes.Relatorio
 import classes.Somar
+import classes.Tela
 import classes.Teste
 import classes.Torcida
 import classes.Venda
@@ -412,6 +413,12 @@ class Exercicios {
         t = porcada
         t.pular()
         t.gritar("verdão")
+    }
+
+    void exercicio30(){
+    //static main(arg) {
+        def tela = new Tela()
+        tela.setVisible(true)
     }
 
 }
