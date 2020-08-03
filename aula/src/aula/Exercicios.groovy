@@ -17,6 +17,8 @@ import classes.Tela
 import classes.Teste
 import classes.Torcida
 import classes.Venda
+import groovy.sql.DataSet
+import groovy.sql.Sql
 import org.junit.Test
 import classes.Cliente as Xu
 import static java.util.Calendar.*
@@ -596,8 +598,22 @@ class Exercicios {
         new File("C:/").eachFile { println it.name}
     }
 
+    @Test
+    void exercicio39() {
+        Sql con = Sql.newInstance("jdbc:hsqldb:file:D:/hypersql/base;shutdown=true", "sa", "1234")
+        con.eachRow("select * from cliente"){p -> println p.id + " - " + p.nome + " - " + p.email}
 
+        def lista = con.rows("select * from cliente")
+        lista.each {cli -> println cli.email}
 
+        con.executeInsert("insert into cliente (nome,email)values('groovy','groovy@email.com')")
 
+        con.eachRow("select * from cliente"){p -> println p.id + " - " + p.nome + " - " + p.email}
+
+        DataSet tabela = con.dataSet("cliente")
+        tabela.add(nome: "g2", email: "g@g.com")
+
+        con.eachRow("select * from cliente"){p -> println p.id + " - " + p.nome + " - " + p.email}
+    }
 
 }
