@@ -19,6 +19,7 @@ import classes.Torcida
 import classes.Venda
 import org.junit.Test
 import classes.Cliente as Xu
+import static java.util.Calendar.*
 
 import java.time.LocalDate
 
@@ -523,6 +524,42 @@ class Exercicios {
         def sql = "insert into cliente  (nome,idade,salario) values $nome, $idade, $salario"
         println sql
 
+    }
+
+
+    @Test
+    void exercicio35() {
+        def data1 = new Date()
+        data1[YEAR] = 2020
+        data1[MONTH] = 5
+        data1[DATE] = 22
+        println data1
+
+        def data2 = new Date()
+        data2[YEAR] = 2020
+        data2[MONTH] = JUNE
+        data2[DATE] = 23
+        println data2
+
+        if(data1>data2){
+            println "data 1 maior que data 2"
+        } else
+        {
+            println "data 1 menor que data 2"
+        }
+
+        Date data = new Date()
+        println data
+        data+=1
+        println data
+        data-=1
+        println data
+        data++
+        println data
+        data--
+        println data
+
+        println data.format("dd/MM/yyyy hh:mm:ss")
 
     }
 
