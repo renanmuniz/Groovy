@@ -497,5 +497,34 @@ class Exercicios {
         println v3
     }
 
+    @Test
+    void exercicio34() {
+        def v1 = "Renan"
+        def v2 = "Renan"
+        println v1 == v2
+
+        def v3 = v1 - "nan"
+        println v3
+
+        String texto = "renan"
+        println texto.capitalize()
+        println texto.findIndexOf {it=="n"}
+        println texto.findIndexOf {it=="r"}
+
+        String textoGrande = '''Quando o texto 
+        for muito grande
+        nao preicsa ficar mais 
+        concatenando usando +'''
+        println textoGrande
+
+        def nome = "Renan"
+        def idade = 30
+        def salario = 2095.0
+        def sql = "insert into cliente  (nome,idade,salario) values $nome, $idade, $salario"
+        println sql
+
+
+    }
+
 
 }
