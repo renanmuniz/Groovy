@@ -563,5 +563,39 @@ class Exercicios {
 
     }
 
+    @Test
+    void exercicio36() {
+        10.times { println it}
+        1.upto(10) { println it}
+        5.downto(1) { println it}
+
+    }
+
+    @Test
+    void exercicio37() {
+        def x = new FileWriter("D:/1.txt").withWriter {e -> e.write("Renan Muniz")}
+        def a = new File("D:/2.txt")
+        a.write("outro")
+
+        def b = new File("D:/3.txt")
+        b.text = "Linha 1"
+        5.times {b << "\nnova linha usando sobrecarga de operador.($it)"}
+
+        def c = new File("D:/3.txt")
+        println c.text
+
+        println c.readLines()*.toUpperCase()
+
+        new File("D:/3.txt").eachLine {linha -> println linha}
+
+        a.delete()
+        b.delete()
+        c.delete()
+        new File("D:/1.txt").delete()
+
+        new File("C:/").eachFile { println it.name}
+    }
+
+
 
 }
