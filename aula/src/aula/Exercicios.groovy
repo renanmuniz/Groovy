@@ -480,5 +480,22 @@ class Exercicios {
 
     }
 
+    @Test
+    void exercicio33() {
+        def v1 = new BigDecimal("10.50")
+        def v2 = 10.50
+        println v2.getClass().name
+
+        def v3 = v1 + v2
+        println v3.getClass().name
+        println v3
+
+        v3 = v1 - v2
+        println v3
+
+        v3 = v1 * v2
+        println v3
+    }
+
 
 }
