@@ -461,4 +461,24 @@ class Exercicios {
         println fat.cliente
     }
 
+    @Test
+    void exercicio32ponto3() {
+        Fatura.metaClass.static.impressao = {println "metodo estatico ok"}
+        Fatura.impressao()
+        def f = new Fatura()
+        f.impressao()
+    }
+
+
+    @Test
+    void exercicioExpando32ponto5() {
+        Expando cliente = new Expando()
+        cliente.nome = "Renan"
+        cliente.idade = 30
+        cliente.impressao = {println "nome: $nome   idade: $idade"}
+        cliente.impressao()
+
+    }
+
+
 }
