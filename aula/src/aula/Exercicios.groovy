@@ -712,4 +712,10 @@ class Exercicios {
         println writer
     }
 
+    @Test
+    void exercicio43() {
+
+
+
+    }
 }
