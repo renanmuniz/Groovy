@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="hsqldb">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../../../../hypersql/hsqldb.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../hypersql/hsqldb.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

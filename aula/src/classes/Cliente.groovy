@@ -1,5 +1,8 @@
 package classes
 
+import groovy.transform.ToString
+
+@ToString
 class Cliente {
     String nome
     Date data
