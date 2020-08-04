@@ -19,6 +19,7 @@ import classes.Torcida
 import classes.Venda
 import groovy.sql.DataSet
 import groovy.sql.Sql
+import groovy.xml.MarkupBuilder
 import org.junit.Test
 import classes.Cliente as Xu
 import static java.util.Calendar.*
@@ -693,6 +694,22 @@ class Exercicios {
         pessoas.values().each { println it}
 
         pessoas.keySet().each { println it}
+    }
+
+    @Test
+    void exercicio41() {
+        def writer = new StringWriter()
+        def html = new MarkupBuilder(writer)
+        html.html {
+            head {title "Minha pagina"}
+            body(id: "main") {
+                h1 "Titulo 1"
+                p "linha de texto"
+                p {strong "outro texto"}
+                a href:"pagina.html","Clique aqui"
+            }
+        }
+        println writer
     }
 
 }
