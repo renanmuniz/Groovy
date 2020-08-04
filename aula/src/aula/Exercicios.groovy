@@ -672,4 +672,27 @@ class Exercicios {
 
     }
 
+    @Test
+    void exercicio40ponto2() {
+        def mapa =[:]
+        println mapa.getClass().name
+
+        mapa["pai"]="Renan"
+        mapa["mae"]="Evelyn"
+        println mapa
+
+        println mapa["pai"]
+        println mapa["filha"]
+
+        mapa.remove("pai")
+        println mapa
+
+        def pessoas = ["jonas":10,"pedro":11,"rebeca":12]
+        println pessoas
+
+        pessoas.values().each { println it}
+
+        pessoas.keySet().each { println it}
+    }
+
 }
